@@ -1,0 +1,5 @@
+scala > val rawData=sc.textFile("C:\Users\Nick\Desktop\lb2")
+case class students(gender:String, course:String, year:Integer)
+scala > val studentsData=rawData.map(x=>x.split("\t")).
+map(x=>students(x(0).toString, x(1).toString, x(2).toInt)
+scala > studentsData.take(3)
